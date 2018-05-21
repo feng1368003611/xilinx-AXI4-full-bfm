@@ -8,6 +8,8 @@
 // Update Count    : 0
 // Status          : Unknown, Use with caution!
 `timescale 1 ns / 1 ps
+`include "axi_defines.vh"
+
 module testbench_my_slave (/*AUTOARG*/) ;
 
    //
@@ -161,7 +163,7 @@ module testbench_my_slave (/*AUTOARG*/) ;
 							 .s00_axi_awuser		( ),
 							 .s00_axi_wuser			( ),
 							 .s00_axi_buser			( ),
-							 .s00_axi_arburst		( 2'b10 ),//AXI_BURST_TYPE_FIXED 2'b00
+							 .s00_axi_arburst		( `AXI_BURST_TYPE_INCR ),
 							 .s00_axi_arqos			( ),
 							 .s00_axi_arregion		( ),
 							 .s00_axi_aruser		( ),
